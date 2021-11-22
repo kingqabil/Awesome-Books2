@@ -3,7 +3,7 @@
 # Awsome-Books2
 
 > This a project in which user can create books and
-> store them in local storage so that any time he/she can access it
+> store them in local storage so that any time they can access it
 > or delete it
 
 
@@ -47,9 +47,11 @@ To get this project in your local machine, follow these steps:
 
 👤 **Ricky Mormor**
 
-- GitHub: [@kingqabil](https://github.com/kingqabil)
-- Twitter: [@kingqabil](https://twitter.com/kingqabil)
-- LinkedIn: [@kingqabil](https://linkedin.com/in/kingqabil)
+- GitHub: [@cwaku](https://github.com/cwaku)
+- LinkedIn: [Ricky Mormor](https://www.linkedin.com/in/ricky-mormor)
+- Frontend Mentor - [@cwaku](https://www.frontendmentor.io/profile/cwaku)
+- Instagram - [@rickymormor](https://www.instagram.com/rickymormor/)
+
 
 ## 🤝 Contributing
 
