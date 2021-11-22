@@ -43,9 +43,9 @@ To get this project in your local machine, follow these steps:
 - Twitter: [@kingqabil](https://twitter.com/kingqabil)
 - LinkedIn: [@kingqabil](https://linkedin.com/in/kingqabil)
 
-## Author 1
+## Author 2
 
-👤 **SadiQ HabiL**
+👤 **Ricky Mormor**
 
 - GitHub: [@kingqabil](https://github.com/kingqabil)
 - Twitter: [@kingqabil](https://twitter.com/kingqabil)
