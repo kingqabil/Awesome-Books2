@@ -12,6 +12,10 @@
 - HTML5
 - JS
 
+## Live Demo 👀
+
+- [Live Demo Link](https://kingqabil.github.io/Awesome-Books2/)
+
 ## Getting Started
 To get a local copy, just follow the steps That I am going to mention bellow:
 
@@ -20,7 +24,7 @@ To get a local copy, just follow the steps That I am going to mention bellow:
 ### Setup
 To get this project in your local machine, follow these steps:
 - Open terminal
-- clone the repository :https://github.com/ishimwezachee/Awesome-books.git
+- clone the repository :https://github.com/kingqabil/Awesome-Books2.git
 - Cd in the project folder
 - run the project in your browser
 
@@ -51,7 +55,7 @@ To get this project in your local machine, follow these steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kingqabil/Capstone1/issues).
+Feel free to check the [issues page](https://github.com/kingqabil/Awesome-Books2/issues).
 
 
 ## Show your support
