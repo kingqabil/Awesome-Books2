@@ -3,8 +3,7 @@
 # Awsome-Books2
 
 > This a project in which user can create books and
-> store them in local storage so that any time they can access it
-> or delete it
+> store them in local storage so that any time they can access and/or delete them.
 
 
 ## Built With
