@@ -1,9 +1,9 @@
-const divbooks = document.querySelector(".books");
-const inputTitle = document.querySelector("#title");
-const inputAuthor = document.querySelector("#author");
-const addBtn = document.querySelector("#add");
+const divbooks = document.querySelector('.books');
+const inputTitle = document.querySelector('#title');
+const inputAuthor = document.querySelector('#author');
+const addBtn = document.querySelector('#add');
 
-const savedData = localStorage.getItem("savedInput");
+const savedData = localStorage.getItem('savedInput');
 
 let collection = [];
 
@@ -12,7 +12,7 @@ if (savedData && savedData !== null) {
 }
 
 const displayData = () => {
-  divbooks.innerHTML = "";
+  divbooks.innerHTML = '';
   collection.forEach((value, index) => {
     divbooks.innerHTML += `
             <div class="books">
@@ -27,8 +27,7 @@ const displayData = () => {
 };
 
 displayData();
-const saveData = () =>
-  localStorage.setItem("savedInput", JSON.stringify(collection));
+const saveData = () => localStorage.setItem('savedInput', JSON.stringify(collection));
 const removeBook = (index) => {
   if (index !== null && index !== undefined) {
     collection.splice(index, 1);
@@ -37,13 +36,13 @@ const removeBook = (index) => {
   }
 };
 removeBook();
-addBtn.addEventListener("click", (e) => {
+addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!inputTitle.value || !inputAuthor.value) {
-    alert("Please fill in the Title and Author");
+    alert('Please fill in the Title and Author');
     return;
   }
-  
+
   const newData = {
     name: inputTitle.value.trim(),
     author: inputAuthor.value.trim(),
