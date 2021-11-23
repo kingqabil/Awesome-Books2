@@ -3,51 +3,61 @@ const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
 const addBtn = document.querySelector('#add');
 
-const savedData = localStorage.getItem('savedInput');
+class Book {
+  constructor(savedData = []) {
+    this.arr = savedData;
+  }
 
-let collection = [];
+  saveData(data) {
+    let existing = JSON.parse(localStorage.getItem('book'));
+    existing = existing || [];
+    this.arr = existing;
+    this.arr.push(data);
+    localStorage.setItem('book', JSON.stringify(this.arr));
+  }
 
-if (savedData && savedData !== null) {
-  collection = JSON.parse(savedData);
+  removeBook = (index) => {
+    if (index !== null && index !== undefined) {
+      this.arr.splice(index, 1);
+      localStorage.setItem('book', JSON.stringify(this.arr));
+      this.getData();
+    }
+  };
+
+  getData() {
+    divbooks.innerHTML = '';
+    this.arr.forEach((value, index) => {
+      divbooks.innerHTML += `
+              <div class="books">
+              <div class="list-btn">
+              <ul class="list">
+                  <li class="title">${value.name}</li>
+                  <p class="by">by</p>
+                  <li class="author">${value.author}</li>
+              </ul>
+              <button id="remove" onclick="remove(${index});">remove</button>
+              </div>
+              <hr>
+              </div>`;
+    });
+  }
 }
 
-const displayData = () => {
-  divbooks.innerHTML = '';
-  collection.forEach((value, index) => {
-    divbooks.innerHTML += `
-            <div class="books">
-            <ul>
-                <li class="title">${value.name}</li>
-                <li class="author">${value.author}</li>
-            </ul>
-              <button id="remove" onclick="removeBook(${index});">remove</button>
-              <hr>
-            </div>`;
-  });
-};
+let collection = JSON.parse(localStorage.getItem('book'));
 
-displayData();
-const saveData = () => localStorage.setItem('savedInput', JSON.stringify(collection));
-const removeBook = (index) => {
-  if (index !== null && index !== undefined) {
-    collection.splice(index, 1);
-    saveData();
-    displayData();
-  }
-};
-removeBook();
+if (collection === null) {
+  collection = [];
+}
+const bookArr = new Book(collection);
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  if (!inputTitle.value || !inputAuthor.value) {
-    alert('Please fill in the Title and Author');
-    return;
+  const book1 = { name: inputTitle.value, author: inputAuthor.value };
+  if (inputTitle.value.length > 0 && inputAuthor.value.length > 0) {
+    bookArr.saveData(book1);
+    bookArr.getData();
   }
-
-  const newData = {
-    name: inputTitle.value.trim(),
-    author: inputAuthor.value.trim(),
-  };
-  collection.push(newData);
-  saveData();
-  displayData();
 });
+
+const remove = (index) => bookArr.removeBook(index);
+remove();
+bookArr.getData();
