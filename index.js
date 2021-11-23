@@ -42,3 +42,24 @@ class Book {
     });
   }
 }
+
+let collection = JSON.parse(localStorage.getItem('book'));
+
+if (collection === null) {
+  collection = [];
+}
+const bookArr = new Book(collection);
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const book1 = { name: inputTitle.value, author: inputAuthor.value };
+  if (inputTitle.value.length > 0 && inputAuthor.value.length > 0) {
+    bookArr.saveData(book1);
+    bookArr.getData();
+  } else {
+    alert('please fill all the inputs');
+  }
+});
+
+const remove = (index) => bookArr.removeBook(index);
+remove();
+bookArr.getData();
