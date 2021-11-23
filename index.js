@@ -16,6 +16,14 @@ class Book {
     localStorage.setItem("book", JSON.stringify(this.arr));
   }
 
+  removeBook = (index) => {
+    if (index !== null && index !== undefined) {
+      this.arr.splice(index, 1);
+      localStorage.setItem("book", JSON.stringify(this.arr));
+      this.getData();
+    }
+  };
+
   getData() {
     divbooks.innerHTML = "";
     this.arr.forEach((value, index) => {
