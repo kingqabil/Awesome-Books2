@@ -1,53 +1,36 @@
-const divbooks = document.querySelector('.books');
-const inputTitle = document.querySelector('#title');
-const inputAuthor = document.querySelector('#author');
-const addBtn = document.querySelector('#add');
+const divbooks = document.querySelector(".books");
+const inputTitle = document.querySelector("#title");
+const inputAuthor = document.querySelector("#author");
+const addBtn = document.querySelector("#add");
 
-const savedData = localStorage.getItem('savedInput');
+class Book {
+  constructor(savedData = []) {
+    this.arr = savedData;
+  }
 
-let collection = [];
+  saveData(data) {
+    let existing = JSON.parse(localStorage.getItem("book"));
+    existing = existing || [];
+    this.arr = existing;
+    this.arr.push(data);
+    localStorage.setItem("book", JSON.stringify(this.arr));
+  }
 
-if (savedData && savedData !== null) {
-  collection = JSON.parse(savedData);
-}
-
-const displayData = () => {
-  divbooks.innerHTML = '';
-  collection.forEach((value, index) => {
-    divbooks.innerHTML += `
-            <div class="books">
-            <ul>
-                <li class="title">${value.name}</li>
-                <li class="author">${value.author}</li>
-            </ul>
-              <button id="remove" onclick="removeBook(${index});">remove</button>
+  getData() {
+    divbooks.innerHTML = "";
+    this.arr.forEach((value, index) => {
+      divbooks.innerHTML += `
+              <div class="books">
+              <div class="list-btn">
+              <ul class="list">
+                  <li class="title">${value.name}</li>
+                  <p class="by">by</p>
+                  <li class="author">${value.author}</li>
+              </ul>
+              <button id="remove" onclick="remove(${index});">remove</button>
+              </div>
               <hr>
-            </div>`;
-  });
-};
-
-displayData();
-const saveData = () => localStorage.setItem('savedInput', JSON.stringify(collection));
-const removeBook = (index) => {
-  if (index !== null && index !== undefined) {
-    collection.splice(index, 1);
-    saveData();
-    displayData();
+              </div>`;
+    });
   }
-};
-removeBook();
-addBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (!inputTitle.value || !inputAuthor.value) {
-    alert('Please fill in the Title and Author');
-    return;
-  }
-
-  const newData = {
-    name: inputTitle.value.trim(),
-    author: inputAuthor.value.trim(),
-  };
-  collection.push(newData);
-  saveData();
-  displayData();
-});
+}
