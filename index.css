@@ -8,6 +8,7 @@ ul {
   display: flex;
   gap: 10px;
   list-style: none;
+  align-items: center;
 }
 
 .list-btn {
@@ -48,3 +49,43 @@ h3 {
   margin: 10% 0;
 }
 
+.books {
+  margin-bottom: 10%;
+}
+
+hr {
+  width: 20%;
+  border: 1px solid #111;
+}
+
+#author {
+  margin: 0;
+}
+
+input {
+  margin-bottom: -20px;
+}
+
+#add {
+  margin-top: -25px;
+  width: 25%;
+  margin-left: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .list-btn {
+    margin-bottom: -50px;
+  }
+
+  h1 {
+    margin-bottom: 10%;
+  }
+
+  h3 {
+    margin: 5% 0;
+  }
+
+  form {
+    margin-top: 5%;
+  }
+}
