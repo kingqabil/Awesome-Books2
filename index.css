@@ -16,6 +16,7 @@ ul {
   gap: 10px;
   padding-right: 10px;
   margin-bottom: 5%;
+  align-items: center;
 }
 
 div.list-btn:nth-child(2n + 1) {
@@ -56,6 +57,7 @@ h3 {
 hr {
   width: 20%;
   border: 1px solid #111;
+  margin-top: 20px;
 }
 
 #author {
@@ -64,12 +66,14 @@ hr {
 
 input {
   margin-bottom: -20px;
+  padding: 10px;
 }
 
 #add {
   margin-top: -25px;
   width: 25%;
   margin-left: 75%;
+  padding: 10px;
 }
 
 @media screen and (min-width: 768px) {
