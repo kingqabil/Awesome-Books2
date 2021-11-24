@@ -3,3 +3,48 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.list-btn {
+  display: flex;
+  gap: 10px;
+  padding-right: 10px;
+  margin-bottom: 5%;
+}
+
+div.list-btn:nth-child(2n + 1) {
+  background-color: #d3d3d3;
+}
+
+#remove {
+  margin-left: auto;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24%;
+  margin-top: 15%;
+  width: 50%;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  margin: 10% 0;
+}
+
