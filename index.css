@@ -202,9 +202,9 @@ input {
     width: 50%;
   }
 
-  span {
+  /* span {
     padding-left: 2%;
-  }
+  } */
 
   .nav-link:not(:last-child) {
     border-right: 1px solid #111;
