@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./index.css" />
-    <title>Awesome Books</title>
-  </head>
-  <body>
-    <main id="main">
-      <div class="menu">
-        <nav class="navbar-container">
-          <a class="logo"><span>Awesome Books</span></a>
-          <ul class="nav-list">
-            <li id="add-list" class="nav-link">List</li>
-            <li id="add-new" class="nav-link">Add New</li>
-            <li id="contact" class="nav-link">Contact</li>
-          </ul>
-          <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </nav>
-      </div>
-      <div class="set-time">
-        <p class="today-date"></p>
-      </div>
-
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="STYLE/style.css">
+ <title> Awesome Books</title>
+</head>
+<body>
+  <main class="main-container">
+    <div class="menu">
+      <nav class="navbar-container">
+        <a class="logo"><span>Awesome Books</span></a>
+        <ul class="nav-list">
+          <li id="add-list" class="nav-link">List</li>
+          <li id="add-new" class="nav-link">Add New</li>
+          <li id="contact" class="nav-link">Contact</li>
+        </ul>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+    <div class="set-time">
+      <p class="today-date"></p>
+    </div>
+    <div class="awesome">
+      <h1>Awesome Books</h1>
       <div class="books"></div>
+    </div>
+    <section class="input-data">
+      <h3>Add A Book</h3>
       <form method="get">
         <input id="title" type="text" placeholder="Title" required><br><br>
         <input id="author" type="text" placeholder="Author" required><br><br>
@@ -50,7 +54,7 @@
   </main>
   <footer>
     <div class="footer-div">
-      <p>Copyright@ 2021 Ricky & Sadiq</p>
+      <p>Copyright@ 2021 RoGraSad</p>
     </div>
   </footer>
   <script src="/script.js"></script>
