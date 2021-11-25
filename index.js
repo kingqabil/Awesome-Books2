@@ -32,12 +32,10 @@ class Book {
               <div class="list-btn">
               <ul class="list">
                   <li class="title">${value.name}</li>
-                  <p class="by">by</p>
-                  <li class="author">${value.author}</li>
+                  <li class="author"> by ${value.author}</li>
               </ul>
               <button id="remove" onclick="remove(${index});">remove</button>
               </div>
-              <hr>
               </div>`;
     });
   }
@@ -55,6 +53,8 @@ addBtn.addEventListener('click', (e) => {
   if (inputTitle.value.length > 0 && inputAuthor.value.length > 0) {
     bookArr.saveData(book1);
     bookArr.getData();
+  } else {
+    alert('please fill all the inputs');
   }
 });
 
@@ -72,18 +72,21 @@ const formInput = document.querySelector('body > main > section');
 const contactPage = document.querySelector('body > main > div.container.d-flex');
 const myTime = document.querySelector('body > main > div.set-time > p');
 const { DateTime } = this.luxon;
+
 const myListPage = () => {
   contactPage.style.display = 'none';
   formInput.style.display = 'none';
   myBookList.style.display = 'block';
 };
 navListBtn.addEventListener('click', myListPage);
+
 const addNewPage = () => {
   myBookList.style.display = 'none';
   contactPage.style.display = 'none';
   formInput.style.display = 'block';
 };
 addNewBtn.addEventListener('click', addNewPage);
+
 const contInfoPage = () => {
   myBookList.style.display = 'none';
   formInput.style.display = 'none';
