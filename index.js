@@ -62,7 +62,8 @@ const remove = (index) => bookArr.removeBook(index);
 remove();
 bookArr.getData();
 
-/ Add navigation
+// Add navigation
+
 const navListBtn = document.querySelector('#add-list');
 const addNewBtn = document.querySelector('#add-new');
 const contactBtn = document.querySelector('#contact');
@@ -89,3 +90,28 @@ const contInfoPage = () => {
   contactPage.style.display = 'block';
 };
 contactBtn.addEventListener('click', contInfoPage);
+
+// mobile menu
+
+const menuWord = document.getElementsByClassName('nav-link');
+const hamburger = document.querySelector('.hamburger');
+const listMenu = document.querySelector('body > main > div.menu > nav > ul');
+
+const menuAppear = () => {
+  hamburger.addEventListener('click', () => {
+    listMenu.classList.toggle('nav-active');
+    hamburger.classList.toggle('turn');
+  });
+};
+const menuDisappear = () => {
+  for (let i = 0; i < menuWord.length; i += 1) {
+    menuWord[i].addEventListener('click', () => {
+      listMenu.classList.remove('nav-active');
+      hamburger.classList.remove('turn');
+    });
+  }
+};
+menuAppear();
+menuDisappear();
+
+setInterval(() => { myTime.innerHTML = `${DateTime.now().toLocaleString(DateTime.DATETIME_MED)}`; }, 1000);
