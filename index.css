@@ -47,6 +47,11 @@ header h3 {
   font-size: medium;
 }
 
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
 header nav li {
   list-style: none;
 }
