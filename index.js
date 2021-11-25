@@ -36,6 +36,7 @@ class Book {
               </ul>
               <button id="remove" onclick="remove(${index});">remove</button>
               </div>
+              <hr>
               </div>`;
     });
   }

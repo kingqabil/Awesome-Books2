@@ -72,6 +72,12 @@ h3 {
   margin-bottom: 10%;
 }
 
+hr {
+  width: 20%;
+  border: 1px solid #111;
+  margin-top: 20px;
+}
+
 #author {
   margin: 0;
 }
